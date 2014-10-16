@@ -1,0 +1,73 @@
+body {
+    overflow: hidden;
+    margin: 0px;
+    background-color: #333333;
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    padding: 8px;
+    background-color: #111111;
+}
+
+.header h1 {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.center {
+    overflow: hidden;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+}
+
+.post {
+    overflow: hidden;
+    margin-top: 32px;
+    background-color: #222222;    
+}
+
+.posthead {
+    overflow: hidden;
+    height: 64px;
+    
+}
+
+.posthead h3 {
+    float: left;
+    width: 80px;
+    line-height: 80px;
+    margin: 0px;
+    font-size: 42px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.posthead h1 {
+    float: left;
+    margin-left: 8px;
+    margin-top: 24px;
+    margin-bottom: 4px;
+}
+
+.postdate {
+    
+    
+    font-size: 10px;
+    color: #99AAEE;
+    margin-top: 0px;
+    margin-left: 88px;
+    margin-bottom: 16px;
+}
+
+.post p {
+    margin: 0px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    color: #DDDDDD
+}
