@@ -133,7 +133,15 @@ Post generatePost(string content, PostData data, string[] format)
 	parts ~= format[4];
 	parts ~= conv.text(data.year);
 	parts ~= format[5];
-	parts ~= content;
+	
+	string[] contentParts = split(content, '\n');
+	foreach(string str; contentParts)
+	{
+		parts ~= "<p>";
+		parts ~= str;
+		parts ~= "</p>";
+	}
+	
 	parts ~= format[6];
 	
 	Post post = {data, parts};
@@ -235,7 +243,7 @@ void main()
 	blog ~= header;
 	size += header.length;
 	
-	for (int i = 1; i <= posts.length; i++)
+	for (int i = cast(int)posts.length; i >= 1; i--)
 	{
 		auto post = posts[i];
 		blog = blog ~ post.parts;

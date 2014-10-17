@@ -90,16 +90,13 @@
 		<div class="center">
 			<div class = "post">
 				<div class = "posthead">
-					<h3>1</h3>
-					<h1>Hello, World</h1>
+					<h3>2</h3>
+					<h1>Oger</h1>
 				</div>
 				<div class = "postdate">
-					October 11, 2014
+					October 16, 2014
 				</div>
-				This is an experimental blog post. As a filler, I'll describe the way this primitive blog generator works. Written in D Lang, this blog generator takes .txt files for posts and additional data from .json files for the date and title, then spits out an html site. Some basic template files, currently just a header.html but possibly a footer.html in the future, are appended to each page. The program finishes by connecting and uploading the html contents to the server by sftp.
-Pushing a blog post requires simply adding a new .txt file to the posts directory. When the program is ran, it will detect that the file is not accompanied by a .json file, and therefore assume the post is new. The program gets the date using the current system's time. For the title it prompts the user. And for the id it finds the maximum by iterating over all other posts. With all the data at hand, a json file is generated for future reference.
-Every time the program is ran, the entire site is recompiled. It's for this reason that post data is saved in json files. The overall benefit is that changes to any of the templates will be incorporated easily with the execution of the program.
-That concludes this first post. Thanks for reading.
+				<p>Hello, World!</p><p>Line number two.</p>
 			</div>
 		</div>
 		
@@ -107,14 +104,13 @@ That concludes this first post. Thanks for reading.
 		<div class="center">
 			<div class = "post">
 				<div class = "posthead">
-					<h3>2</h3>
-					<h1>Oger</h1>
+					<h3>1</h3>
+					<h1>Hello, World</h1>
 				</div>
 				<div class = "postdate">
-					October 16, 2014
+					October 11, 2014
 				</div>
-				Hello, World!
-Line number two.
+				<p>This is an experimental blog post. As a filler, I'll describe the way this primitive blog generator works. Written in D Lang, this blog generator takes .txt files for posts and additional data from .json files for the date and title, then spits out an html site. Some basic template files, currently just a header.html but possibly a footer.html in the future, are appended to each page. The program finishes by connecting and uploading the html contents to the server by sftp.</p><p>Pushing a blog post requires simply adding a new .txt file to the posts directory. When the program is ran, it will detect that the file is not accompanied by a .json file, and therefore assume the post is new. The program gets the date using the current system's time. For the title it prompts the user. And for the id it finds the maximum by iterating over all other posts. With all the data at hand, a json file is generated for future reference.</p><p>Every time the program is ran, the entire site is recompiled. It's for this reason that post data is saved in json files. The overall benefit is that changes to any of the templates will be incorporated easily with the execution of the program.</p><p>That concludes this first post. Thanks for reading.</p>
 			</div>
 		</div>
 		
