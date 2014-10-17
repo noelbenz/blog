@@ -100,7 +100,15 @@ struct PostData
 		
 		jsonValue.object = jsonObj;
 		
-		return conv.text(json.toJSON(&jsonValue, true));
+		string outputJson;
+		version(DMD)
+		{
+			return conv.text(json.toJSON(&jsonValue, true));
+		}
+		version(GNU)
+		{
+			return conv.text(json.toJSON(&jsonValue));
+		}
 	}
 }
 
@@ -160,6 +168,7 @@ void main()
 {
 	
 	auto header = cast(string)file.read("templates/header.html");
+	auto footer = cast(string)file.read("templates/footer.html");
 	string[] postFmt = split(cast(string)file.read("templates/post.html"), '@');
 	auto style = cast(string)file.read("templates/style.css");
 	
@@ -169,8 +178,10 @@ void main()
 	string newPostContent;
 	string newPostJsonPath;
 	
-	foreach(f; file.dirEntries("posts", "*.txt", file.SpanMode.shallow))
+	foreach(file.DirEntry f; file.dirEntries("posts", file.SpanMode.shallow))
 	{
+		if(path.extension(f.name) != ".txt"){continue;}
+		
 		auto postContent = cast(string)file.read(f.name);
 		auto jsonPath = path.setExtension(f.name, ".json");
 		
@@ -235,6 +246,9 @@ void main()
 		}
 	}
 	
+	blog ~= footer;
+	size += footer.length;
+	
 	char[] html = new char[size];
 	
 	int p = 0;
@@ -242,6 +256,7 @@ void main()
 	{
 		auto str = blog[i];
 		html[p .. p+str.length] = str;
+		p += str.length;
 	}
 	
 	file.write("html/index.html", html);

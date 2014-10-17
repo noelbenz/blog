@@ -1,8 +1,123 @@
 
-			</div>
-		</div>umber two.ss = "postdate">
-					div class = "posthead">
-					<h3>g generator works. Written in D Lang, this blog generator takes .txt files for posts and additional data from .json files for the date and title, then spits out an html site. Some basic template files, currently just a header.html but possibly a footer.html in the future, are appended to each page. The program finishes by connecting and uploading the html contents to the server by sftp.
+<html>
+	<head>
+		<style>
+			body {
+				overflow: hidden;
+				margin: 0px;
+				background-color: #333333;
+				color: #EEEEEE;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			
+			.header {
+				padding: 8px;
+				background-color: #111111;
+			}
+			
+			.header h1 {
+				text-align: center;
+				margin-top: 12px;
+				margin-bottom: 12px;
+			}
+			
+			.center {
+				overflow: hidden;
+				margin-top: 0px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 800px;
+			}
+			
+			.post {
+				overflow: hidden;
+				margin-top: 32px;
+				background-color: #222222;	
+			}
+			
+			.posthead {
+				overflow: hidden;
+				height: 64px;
+				
+			}
+			
+			.posthead h3 {
+				float: left;
+				width: 80px;
+				line-height: 80px;
+				margin: 0px;
+				font-size: 42px;
+				text-align: center;
+				vertical-align: middle;
+			}
+			
+			.posthead h1 {
+				float: left;
+				margin-left: 8px;
+				margin-top: 24px;
+				margin-bottom: 4px;
+			}
+			
+			.postdate {
+				
+				
+				font-size: 10px;
+				color: #99AAEE;
+				margin-top: 0px;
+				margin-left: 88px;
+				margin-bottom: 16px;
+			}
+			
+			.post p {
+				margin: 0px;
+				margin-left: 16px;
+				margin-right: 16px;
+				margin-bottom: 24px;
+				color: #DDDDDD
+			}
+			
+		</style>
+	</head>
+	<body>
+
+		<div class="header">
+			
+			<h1>Noel Benzinger</h1>
+			
+		</div>
+		
+		
+		<div class="center">
+			<div class = "post">
+				<div class = "posthead">
+					<h3>1</h3>
+					<h1>Hello, World</h1>
+				</div>
+				<div class = "postdate">
+					October 11, 2014
+				</div>
+				This is an experimental blog post. As a filler, I'll describe the way this primitive blog generator works. Written in D Lang, this blog generator takes .txt files for posts and additional data from .json files for the date and title, then spits out an html site. Some basic template files, currently just a header.html but possibly a footer.html in the future, are appended to each page. The program finishes by connecting and uploading the html contents to the server by sftp.
 Pushing a blog post requires simply adding a new .txt file to the posts directory. When the program is ran, it will detect that the file is not accompanied by a .json file, and therefore assume the post is new. The program gets the date using the current system's time. For the title it prompts the user. And for the id it finds the maximum by iterating over all other posts. With all the data at hand, a json file is generated for future reference.
 Every time the program is ran, the entire site is recompiled. It's for this reason that post data is saved in json files. The overall benefit is that changes to any of the templates will be incorporated easily with the execution of the program.
-That concludes this first post. Thanks for reading.ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ
+That concludes this first post. Thanks for reading.
+			</div>
+		</div>
+		
+		
+		<div class="center">
+			<div class = "post">
+				<div class = "posthead">
+					<h3>2</h3>
+					<h1>Oger</h1>
+				</div>
+				<div class = "postdate">
+					October 16, 2014
+				</div>
+				Hello, World!
+Line number two.
+			</div>
+		</div>
+		
+		
+	</body>
+</html>
